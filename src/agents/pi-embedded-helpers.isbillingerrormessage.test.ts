@@ -30,6 +30,7 @@ describe("isAuthPermanentErrorMessage", () => {
       "could not validate credentials",
       "API_KEY_REVOKED",
       "api_key_deleted",
+      "HTTP 403 permission_error: OAuth authentication is currently not allowed for this organization.",
     ];
     for (const sample of samples) {
       expect(isAuthPermanentErrorMessage(sample)).toBe(true);
